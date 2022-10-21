@@ -14,13 +14,6 @@ export default function Header({ title }) {
       <p>
         Download. Run. Get paid.
       </p>
-      <img
-        className={styles.screenshot}
-        src="/rvubot-screenshot.png"
-        width="706"
-        height="940"
-        alt="RVUbot Screenshot"
-      />
     </>
   );
 }
