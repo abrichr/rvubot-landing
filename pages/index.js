@@ -1,4 +1,6 @@
 import Head from "next/head";
+import { PopupButton } from "react-calendly";
+
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import FeedbackForm from "@components/FeedbackForm";
@@ -21,10 +23,21 @@ export default function Home() {
 
       <main>
         <Header title="RVUbot" />
+
+
         <div className={styles.button_container}>
-          <a href="https://t.co/pNoUmSQm9A" className={styles.button}>
-            Book a Free Consultation
-          </a>
+          {/*<a href="https://t.co/pNoUmSQm9A" className={styles.button}>*/}
+              <PopupButton
+                className={styles.button}
+                url="https://calendly.com/mldsai/rvubot"
+                /*
+                 * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
+                 * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
+                 */
+                rootElement={typeof window !== "undefined" ? document.getElementById("__next") : null}
+                text="Book a Free Consultation"
+              />
+          {/*</a>*/}
         </div>
         <p className="description">
           or

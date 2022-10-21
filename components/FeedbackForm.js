@@ -17,7 +17,7 @@ export default function FeedbackForm() {
             </label>
         </p>
         <input id="email" className={styles['form-field']} type="email" name="email" placeholder="your@email.com" required />
-        <button className={styles.button} type="submit">Get Monthly Updates</button>
+        <button className={styles.button} type="submit">Join the Waitlist</button>
       </form>
   )
 }

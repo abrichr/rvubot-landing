@@ -12,12 +12,12 @@ export default function Success() {
       </Head>
 
       <main>
-        <h1>Submission Received!</h1>
-        <p>
+        <h1 className="text-3xl font-bold mb-10">Submission Received!</h1>
+        <p className="mb-5">
           Thank you for your interest! We will reach out shortly.
         </p>
         <p>
-          Head back to the <Link href="/"><a>home page</a></Link>.
+          Head back to the <Link href="/"><a className="underline text-blue-600">home page</a></Link>.
         </p>
       </main>
 
