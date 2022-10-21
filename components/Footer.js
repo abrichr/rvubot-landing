@@ -4,7 +4,8 @@ export default function Footer() {
   return (
     <>
       <footer className={styles.footer}>
-        Made with <img src="/netliheart.svg" alt="Netlify Logo" className={styles.logo} /> for you
+        &copy; {new Date().getFullYear()} &nbsp;
+        <a href="//mldsai.com" target="_blank">MLDSAI Inc.</a>
       </footer>
     </>
   )

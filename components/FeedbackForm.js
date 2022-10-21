@@ -6,7 +6,7 @@ export default function FeedbackForm() {
         className={styles.form}
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        name="feedback"
+        name="register"
         method="POST"
         action="/success"
       >
@@ -17,15 +17,19 @@ export default function FeedbackForm() {
             </label>
         </p>
   
+        {/*
         <label htmlFor="name">Name</label>
         <input id="name" className={styles['form-field']} type="text" name="name" />
 
         <label htmlFor="email">Email</label>
-        <input id="email" className={styles['form-field']} type="email" name="email" required />
+        */}
+        <input id="email" className={styles['form-field']} type="email" name="email" placeholder="your@email.com" required />
 
+        {/*
         <label htmlFor="feedback">What is your feedback?</label>
         <textarea id="feedback" className={styles['form-field']} wrap="soft" name="feedback" required></textarea>
-        <button className={styles.button} type="submit">Submit</button>
+        */}
+        <button className={styles.button} type="submit">Get Monthly Updates</button>
       </form>
   )
 }

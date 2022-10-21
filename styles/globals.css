@@ -17,6 +17,7 @@ main {
   justify-content: center;
   margin: 0 auto;
   max-width: 60ch;
+  text-align: center;
 }
 
 hr {
