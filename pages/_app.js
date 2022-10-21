@@ -6,7 +6,7 @@ function Application({ Component, pageProps }) {
     <>
       <GoogleAnalytics trackPageViews />
       <Component {...pageProps} />
-    <>
+    </>
   )
 }
 
