@@ -47,17 +47,20 @@ export default function Success() {
     invitee_email,
   } = router.query;
 
-  const dateTimeFormat = new Intl.DateTimeFormat('en', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-  });
-  const dtStr = dateTimeFormat.formatRange(
-    Date.parse(event_start_time),
-    Date.parse(event_end_time),
-  );
+  let dtStr = "";
+  if (event_start_time && event_end_time) {
+    const dateTimeFormat = new Intl.DateTimeFormat('en', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+    });
+    dtStr = dateTimeFormat.formatRange(
+      Date.parse(event_start_time),
+      Date.parse(event_end_time),
+    );
+  }
 
 
   return (
