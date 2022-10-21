@@ -1,0 +1,15 @@
+.button {
+  background-color: teal;
+  border: 1px solid black;
+  color: white;
+  width: 50%;
+  font-size: inherit;
+  margin: 15px 0;
+  padding: 12px 20px;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+}
+.button_container {
+  margin: 0 40px;
+}
