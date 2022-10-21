@@ -10,7 +10,13 @@ export default function Home() {
     <div className="container">
       <Head>
         <title>RVUbot</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
+        <meta property="og:url" content="https://www.rvubot.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="RVUbot" />
+        <meta property="og:description" content="Medical billing audit. Easy RVU Recovery. Download, run, get paid." />
+        <meta property="og:image" content="https://www.rvubot.com/rvubot-screenshot.png" />
+        <meta property="og:image:type" content="image/png" />
       </Head>
 
       <main>
