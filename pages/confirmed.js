@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { VscCalendar, VscGlobe, VscCircleLargeFilled, VscCallOutgoing } from 'react-icons/vsc';
 
 import Footer from '@components/Footer'
 
@@ -19,22 +20,7 @@ https://www.rvubot.com/confirmed?assigned_to=Richard%20Abrich&event_type_uuid=96
 */
 
 
-export default function Success() {
-  /*
-  const {
-    assigned_to,
-    event_type_uuid,
-    event_type_name,
-    event_start_time,
-    event_end_time,
-    invitee_uuid,
-    invitee_full_name,
-    invitee_email,
-  } = Object.fromEntries(new URLSearchParams(
-    typeof window !== "undefined" ? window.location.search : ""
-  ));
-  */
-
+export default function Confirmed() {
   const router = useRouter();
   const {
     assigned_to,
@@ -47,7 +33,7 @@ export default function Success() {
     invitee_email,
   } = router.query;
 
-  let dtStr = "";
+  let dtStr = '';
   if (event_start_time && event_end_time) {
     const dateTimeFormat = new Intl.DateTimeFormat('en', {
       year: 'numeric',
@@ -62,7 +48,6 @@ export default function Success() {
     );
   }
 
-
   return (
     <div className="container">
       <Head>
@@ -75,19 +60,28 @@ export default function Success() {
         <p className="mb-5">
           You are scheduled with {assigned_to}.
         </p>
-        <p>
-          {dtStr}
-        </p>
-        <p>
-          Eastern Time &mdash; US &amp; Canada
-        </p>
-        <p>
-          +1 833-335-6116
-        </p>
-        <p>
+        <div className="flex flex-col text-xl m-auto">
+          <p className="flex flex-row">
+            <VscCircleLargeFilled className="mr-3 text-blue-600" />
+            {event_type_name}
+          </p>
+          <p className="flex flex-row text-neutral-500">
+            <VscCalendar className="mr-3" />
+            {dtStr}
+          </p>
+          <p className="flex flex-row text-neutral-500">
+            <VscGlobe className="mr-3" />
+            Eastern Time &mdash; US &amp; Canada
+          </p>
+          <p className="flex flex-row text-neutral-500">
+            <VscCallOutgoing className="mr-3" />
+            +1 833-335-6116
+          </p>
+        </div>
+        <p className="mt-5 font-bold">
           A calendar invitation has been sent to your email address.
         </p>
-        <p className="mt-5">
+        <p className="mt-10">
           Head back to the <Link href="/"><a className="underline text-blue-600">home page</a></Link>.
         </p>
       </main>
