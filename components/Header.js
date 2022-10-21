@@ -4,7 +4,7 @@ import styles from './Header.module.css'
 export default function Header({ title }) {
   return (
     <>
-      <div className="flex flex-row justify-center mb-10">
+      <div className="flex flex-row justify-center mb-8">
         <VscHubot className="text-5xl font-bold"/>
         <div>
           <h1 className="text-3xl font-bold">{title}</h1>

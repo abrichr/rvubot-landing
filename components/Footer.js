@@ -5,7 +5,7 @@ export default function Footer() {
     <>
       <footer className={styles.footer}>
         &copy; {new Date().getFullYear()} &nbsp;
-        <a href="//mldsai.com" target="_blank">MLDSAI Inc.</a>
+        <a className="underline text-blue-600" href="//mldsai.com" target="_blank">MLDSAI Inc.</a>
       </footer>
     </>
   )
