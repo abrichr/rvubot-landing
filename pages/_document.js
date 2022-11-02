@@ -18,7 +18,7 @@ class OverriddenDocument extends Document {
             id="hs-script-loader"
             async
             defer
-            src="//js-na1.hs-scripts.com/21588713.js"
+            src="//js-na1.hs-scripts.com/23274239.js"
           ></script>
         </body>
       </Html>
